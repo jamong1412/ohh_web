@@ -425,8 +425,9 @@ def change_order_status():
     
     return render_template("주문내역.html", order_list = order, start_date = start_date, end_date=end_date)
 
-if __name__=="__main__":
-    app.secret_key = "superSecrectKey"
+if __name__=="__main__":hhcast
+    app.secret_key = "superSecrectKey_ocast"
+#     app.config['SESSION_TYPE'] = 'filesystem'
     app.run(host="127.0.0.1", port=5000, use_reloader=True, debug=True)
 
 
