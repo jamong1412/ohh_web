@@ -9,10 +9,8 @@ from flask import Response
 DATABASE = "ohh-web.db"
 
 app = Flask(__name__)
-
-@app.route("/")
-def index():
-    return render_template("index.html")
+app.config['SESSION_TYPE'] = 'filesystem'
+app.config['SECRET_KEY'] = 'superSecrectKey'
 
 
 @app.route("/login", methods=["GET","POST"])
